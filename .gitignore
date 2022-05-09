@@ -1,4 +1,4 @@
-backend\__pycache__
+backend\_pycache_
 backend\venv\
 3tier.pem
 .gitignore
