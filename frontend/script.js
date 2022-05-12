@@ -1,4 +1,4 @@
-var url = "http://127.0.0.1:5000/students";
+var url = "http://3.84.116.199:5000/students";
 
 function listar(list) {
     let text = "<table border='1'> <tr> <th>CPF</th><th>Nome</th><th>Idade</th><th>Email</th><th>Média</th><th>Histórico</th><th>Turma</th>";
