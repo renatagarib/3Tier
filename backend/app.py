@@ -1,5 +1,4 @@
 #from pickle import TRUE
-from waitress import serve
 from flask import Flask, Response, request
 from flask_cors import CORS
 import pymysql
@@ -173,5 +172,4 @@ def create_response(status, content_name, content, message=False):
     return Response(json.dumps(body), status=status,mimetype="application/json")
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', port=80) 
-    serve(app, host='0.0.0.0', port=5000)
+    app.run()
