@@ -51,7 +51,7 @@ def to_json(list):
 
 @app.route("/students", methods=["GET"])
 def read_all():
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='mydb.cvffygnwff0i.us-east-1.rds.amazonaws.com',
                                 user='root',
                                 password='nilmar21',
                                 database='mydb')
@@ -66,7 +66,7 @@ def read_all():
 
 @app.route('/students/<id>', methods=['GET'])
 def read_one(id):
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='mydb.cvffygnwff0i.us-east-1.rds.amazonaws.com',
                                 user='root',
                                 password='nilmar21',
                                 database='mydb')
@@ -86,7 +86,7 @@ def create():
     body = request.get_json()
     obj_student = Student(body['CPF'], body['nome'], body['idade'], body['email'], body['media'], body['historico'], body['id_turma'])
 
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='mydb.cvffygnwff0i.us-east-1.rds.amazonaws.com',
                                 user='root',
                                 password='nilmar21',
                                 database='mydb')
@@ -101,7 +101,7 @@ def create():
 @app.route('/students/<id>', methods=["PUT"])
 def update(id):
 
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='mydb.cvffygnwff0i.us-east-1.rds.amazonaws.com',
                                 user='root',
                                 password='nilmar21',
                                 database='mydb')
@@ -139,7 +139,7 @@ def update(id):
 
 @app.route('/students/<id>', methods=["DELETE"])
 def delete(id):
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='mydb.cvffygnwff0i.us-east-1.rds.amazonaws.com',
                                 user='root',
                                 password='nilmar21',
                                 database='mydb')
